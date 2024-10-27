@@ -1,0 +1,48 @@
+<div *ngIf="registerFormActive">
+  <div class="loginContainer">
+    <div class="loginBody">
+      <div class="imageLogin">
+        <img src="travel_photo.png" alt="" />
+      </div>
+      <div class="formContainer">
+        <form action="">
+          <h2>Register</h2>
+          <p>Login to access yourEasyset24 account</p>
+          <div style="display: flex; gap: 40px">
+            <div class="inputValue">
+              <label for="lastName">First Name</label>
+              <input name="email" type="email" placeholder="Easyset24" />
+            </div>
+            <div class="inputValue">
+              <label for="lastName">Last Name</label>
+              <input name="email" type="email" placeholder="Easyset24" />
+            </div>
+          </div>
+          <div class="inputValue">
+            <label for="email">Email</label>
+            <input
+              name="email"
+              type="email"
+              placeholder="Easyset24@gmail.com"
+            />
+          </div>
+          <div class="inputValue">
+            <label for="password">Password</label>
+            <input name="password" type="password" value="000000000000" />
+          </div>
+          <div class="inputValue">
+            <label for="password">Confirm Password</label>
+            <input name="password" type="password" value="000000000000" />
+          </div>
+          <div class="actions">
+            <div class="RememberMe">
+              <input type="checkbox" />
+              <span>I agree to all the Terms and Privacy Policies</span>
+            </div>
+          </div>
+          <button type="submit">Register Now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

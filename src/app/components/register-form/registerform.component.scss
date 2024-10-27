@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.loginContainer {
+  padding-top: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  .loginBody {
+    position: relative;
+    width: 1064px;
+    height: 712px;
+    padding: 52px;
+    display: flex;
+    border-radius: 16px;
+    border: 1px solid rgba(166, 166, 166, 1);
+    background-color: rgba(239, 239, 239, 1);
+    .imageLogin {
+      width: 50%;
+    }
+    .closeButton {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+    .formContainer {
+      width: calc(100% - 320px);
+      padding: 63px 0px 0px 75px;
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      p {
+        font-size: 12px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      h2 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: 700;
+      }
+      .inputValue {
+        display: block;
+        label {
+          font-size: 14px;
+          font-family: "Poppins", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+        }
+        input {
+          width: 100%;
+          height: 48px;
+          border: 1px solid lightgrey;
+          border-radius: 4px;
+          background-color: white;
+          padding: 8px;
+          font-size: 12px;
+          font-family: "Poppins", sans-serif;
+          font-weight: 400;
+        }
+      }
+      .actions {
+        display: flex;
+        justify-content: space-between;
+        .RememberMe {
+          display: flex;
+          gap: 8px;
+          input {
+            width: 24px;
+            border: 1px solid lightgray;
+            cursor: pointer;
+          }
+          span {
+            font-size: 14px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+          }
+        }
+        a {
+          font-family: "Poppins", sans-serif;
+          font-weight: 400;
+          font-size: 14px;
+          color: rgba(7, 104, 159, 1);
+        }
+      }
+      button[type="submit"] {
+        width: 100%;
+        height: 48px;
+        background-color: rgba(7, 104, 159, 1);
+        border-radius: 4px;
+        color: white;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+      }
+    }
+  }
+}

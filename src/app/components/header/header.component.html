@@ -1,0 +1,16 @@
+<header>
+  <div class="logo">
+    <img src="Logo.svg" alt="" />
+  </div>
+  <div>
+    <app-search-input></app-search-input>
+  </div>
+  <div class="btnContainer">
+    <select #languageSelect (change)="changeLanguage(languageSelect.value)">
+      <option value="en">EN</option>
+      <option value="ukr">UA</option>
+    </select>
+    <button (click)="toggleLogin()">{{ "Login" | translate }}</button>
+    <button (click)="toggleRegister()">Register</button>
+  </div>
+</header>
