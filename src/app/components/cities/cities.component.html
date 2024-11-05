@@ -1,0 +1,22 @@
+<div class="cardContainer">
+  <ul>
+    <li *ngFor="let city of cities">
+      <div class="cardBody">
+        <img [src]="city.image" alt="{{ city.name }}" />
+        <h3>{{ city.name }} (Rating: {{ city.rating }})</h3>
+        <p>{{ city.date }}</p>
+        <p>{{ city.title }}</p>
+        <button (click)="toggleLike(city.id)">
+          <img
+            [src]="
+              city.like
+                ? 'https://img.icons8.com/ios-filled/50/FFFFFF/like--v1.png'
+                : 'Vector.svg'
+            "
+            alt="{{ city.like ? 'Liked' : 'Unliked' }}"
+          />
+        </button>
+      </div>
+    </li>
+  </ul>
+</div>

@@ -1,13 +1,5 @@
 <div class="body">
-  <app-header
-    [loginFormActive]="loginFormActive"
-    [registerFormActive]="registerFormActive"
-    (toggleLoginEvent)="toggleLoginForm()"
-    (toggleRegisterEvent)="toggleRegisterForm()"
-    (changeLanguageEvent)="changeLanguage($event)"
-  ></app-header>
-  <app-main
-    [loginFormActive]="loginFormActive"
-    [registerFormActive]="registerFormActive"
-  ></app-main>
+  <app-header (changeLanguageEvent)="changeLanguage($event)"></app-header>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
 </div>

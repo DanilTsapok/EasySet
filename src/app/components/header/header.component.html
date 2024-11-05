@@ -1,16 +1,28 @@
 <header>
   <div class="logo">
-    <img src="Logo.svg" alt="" />
+    <a href="/home">
+      <img src="Logo.svg" alt="" />
+    </a>
   </div>
   <div>
     <app-search-input></app-search-input>
   </div>
   <div class="btnContainer">
-    <select #languageSelect (change)="changeLanguage(languageSelect.value)">
+    <select
+      #languageSelect
+      (change)="changeLanguage(languageSelect.value)"
+      [value]="selectedLanguage"
+    >
       <option value="en">EN</option>
       <option value="ukr">UA</option>
     </select>
-    <button (click)="toggleLogin()">{{ "Login" | translate }}</button>
-    <button (click)="toggleRegister()">Register</button>
+    <a routerLink="/likes"
+      ><img
+        width="25px"
+        src="https://img.icons8.com/ios-filled/50/07689f/like--v1.png"
+        alt=""
+    /></a>
+    <a id="btn" routerLink="Login">{{ "Login" | translate }}</a>
+    <a id="btn" routerLink="Register">{{ "Register" | translate }}</a>
   </div>
 </header>

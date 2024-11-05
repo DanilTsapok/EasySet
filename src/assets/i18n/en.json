@@ -3,5 +3,6 @@
   "Email": "Email",
   "Password": "Password",
   "Login": "Login",
-  "Register": "Register"
+  "Register": "Register",
+  "UpdateBtn": "Update Form Data"
 }

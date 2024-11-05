@@ -67,6 +67,7 @@ export class LoginFormComponent {
     this.animationState =
       this.animationState === 'active' ? 'inactive' : 'active';
   }
+
   form: FormGroup;
 
   constructor(private fb: FormBuilder, private translate: TranslateService) {

@@ -9,11 +9,12 @@ import {
 
 import { SearchInputComponent } from './search-input/search-input.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [SearchInputComponent, TranslateModule],
+  imports: [SearchInputComponent, TranslateModule, RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
@@ -23,9 +24,10 @@ export class HeaderComponent {
   @Output() toggleLoginEvent = new EventEmitter();
   @Output() toggleRegisterEvent = new EventEmitter();
   @Output() changeLanguageEvent = new EventEmitter<string>();
-  animationState = 'inactive';
-
+  animationState: string = 'inactive';
+  selectedLanguage = localStorage.getItem('lang');
   changeLanguage(lang: string) {
+    this.selectedLanguage = lang;
     this.changeLanguageEvent.emit(lang);
   }
   toggleLogin() {

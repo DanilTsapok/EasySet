@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.backgroundNotFound {
+  width: 100%;
+  height: 60vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../../../../public/404NotFound.jfif");
+  h1 {
+    font-size: 100px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    line-height: 140px;
+    font-style: normal;
+    color: rgba(217, 217, 217, 0.5);
+  }
+  p {
+    font-size: 24px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    line-height: 33.6px;
+    font-style: normal;
+    color: rgba(255, 255, 255, 1);
+  }
+}
