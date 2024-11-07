@@ -61,7 +61,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class LoginFormComponent {
   animationState = 'inactive';
-  @Input() loginFormActive!: boolean;
+
   @Input() toggleState: any;
   toggleAnimation() {
     this.animationState =

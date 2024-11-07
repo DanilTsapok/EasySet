@@ -1,4 +1,4 @@
-<div *ngIf="registerFormActive">
+<div>
   <div class="loginContainer">
     <div class="loginBody">
       <div class="imageLogin">
@@ -6,20 +6,20 @@
       </div>
       <div class="formContainer">
         <form action="">
-          <h2>Register</h2>
+          <h2>{{ "Register" | translate }}</h2>
           <p>Login to access yourEasyset24 account</p>
           <div style="display: flex; gap: 40px">
             <div class="inputValue">
-              <label for="lastName">First Name</label>
-              <input name="email" type="email" placeholder="Easyset24" />
+              <label for="lastName">{{ "name" | translate }}</label>
+              <input name="" type="text" placeholder="Easyset24" />
             </div>
             <div class="inputValue">
-              <label for="lastName">Last Name</label>
+              <label for="lastName">{{ "surname" | translate }}</label>
               <input name="email" type="email" placeholder="Easyset24" />
             </div>
           </div>
           <div class="inputValue">
-            <label for="email">Email</label>
+            <label for="email">{{ "Email" | translate }}</label>
             <input
               name="email"
               type="email"
@@ -27,17 +27,17 @@
             />
           </div>
           <div class="inputValue">
-            <label for="password">Password</label>
+            <label for="password">{{ "Password" | translate }}</label>
             <input name="password" type="password" value="000000000000" />
           </div>
           <div class="inputValue">
-            <label for="password">Confirm Password</label>
+            <label for="password">{{ "ConfirmPassword" | translate }}</label>
             <input name="password" type="password" value="000000000000" />
           </div>
           <div class="actions">
             <div class="RememberMe">
               <input type="checkbox" />
-              <span>I agree to all the Terms and Privacy Policies</span>
+              <span>{{ "Accept" | translate }}</span>
             </div>
           </div>
           <button type="submit">Register Now</button>

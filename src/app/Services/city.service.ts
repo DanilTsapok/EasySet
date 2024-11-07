@@ -70,6 +70,7 @@ export class CityService {
   constructor() {
     this.checkLike();
   }
+
   private storedIds: number[] = JSON.parse(
     localStorage.getItem('likedCity') || '[]'
   );

@@ -9,8 +9,8 @@ import { RegisterformComponent } from './components/register-form/registerform.c
 
 export const routes: Routes = [
   { path: 'likes', component: LikesContentComponent },
-  { path: 'login', component: LoginFormComponent },
-  { path: 'register', component: RegisterformComponent },
+  { path: 'Login', component: LoginFormComponent },
+  { path: 'Register', component: RegisterformComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: MainComponent },
   { path: '**', component: NotFoundComponent },

@@ -1,8 +1,14 @@
 {
   "lang": "English",
   "Email": "Email",
+  "name": "First Name",
+  "surname": "Last Name",
   "Password": "Password",
+  "ConfirmPassword": "Confirm Password",
   "Login": "Login",
   "Register": "Register",
-  "UpdateBtn": "Update Form Data"
+  "UpdateBtn": "Update Form Data",
+  "ForgotPassword": "Forgot Password",
+  "registerNow": "Register Now",
+  "Accept": "I agree to all the Terms and Privacy Policies"
 }
