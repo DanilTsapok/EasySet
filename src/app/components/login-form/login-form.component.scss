@@ -16,6 +16,16 @@
     border-radius: 16px;
     border: 1px solid rgba(166, 166, 166, 1);
     background-color: rgba(239, 239, 239, 1);
+    animation: 0.3s ease-in-out anim;
+    @keyframes anim {
+      from {
+        transform: translateY(100px);
+        opacity: 0.1;
+      }
+      to {
+        opacity: 1;
+      }
+    }
     .imageLogin {
       width: 50%;
     }

@@ -2,17 +2,38 @@
 .cardContainer {
   width: 100%;
   display: flex;
+  min-height: 90vh;
   justify-content: space-between;
   align-items: start;
-  padding: 0 100px;
+  padding: 100px 100px;
+  background-image: url("../../../../public/LikesBack.jfif");
+  background-size: cover;
   h1 {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     line-height: 140px;
     font-size: 100px;
     color: rgba(7, 104, 159, 1);
+    animation: 1.2s ease-in-out anim2;
   }
-
+  @keyframes anim2 {
+    from {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes anim {
+    from {
+      transform: translateY(100px);
+      opacity: 0.1;
+    }
+    to {
+      opacity: 1;
+    }
+  }
   ul {
     width: 100%;
     display: flex;
@@ -20,18 +41,18 @@
     gap: 24px;
     align-items: center;
     flex-wrap: wrap;
+    animation: 1.2s ease-in-out anim;
   }
 }
 main {
   width: 100%;
   height: 100vh;
-  padding-top: 150px;
+  padding-top: 100px;
 }
 .cardBody {
   width: 288px;
   height: 367px;
-  border: 1px solid lightgray;
-  padding: 8px;
+
   border-radius: 5px;
   position: relative;
   img {
@@ -41,8 +62,8 @@ main {
   }
   button {
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: 20px;
+    left: 20px;
 
     border-radius: 50%;
     width: 30px;

@@ -1,1 +1,28 @@
-<p>hotels works!</p>
+<p>{{ cityData.name }}</p>
+<p>{{ cityData.rating }}</p>
+<p>{{ cityData.title }}</p>
+
+<div *ngIf="cityData.hotels?.length">
+  <h3>Hotels</h3>
+  <ul>
+    <li *ngFor="let hotel of cityData.hotels">
+      <mat-card appearance="outlined">
+        <mat-card-content>
+          <mat-grid-list cols="2" rowHeight="1:1">
+            <mat-grid-tile>
+              <div>Name: {{ hotel.name }}</div>
+              <div>Rating: {{ hotel.rating }}</div>
+              <div>Location: {{ hotel.location }}</div>
+              <div>{{ hotel.description }}</div>
+              <div>{{ hotel.price }}</div>
+              <div>{{ hotel.countReviews }}</div>
+            </mat-grid-tile>
+            <mat-grid-tile
+              ><img src="{{ hotel.image }}" alt="" srcset=""
+            /></mat-grid-tile>
+          </mat-grid-list>
+        </mat-card-content>
+      </mat-card>
+    </li>
+  </ul>
+</div>

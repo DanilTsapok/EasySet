@@ -1,3 +1,4 @@
+import { CurrencyPipe } from '@angular/common';
 import { cities } from './CitiesState';
 import { LikeService } from './like.service';
 import { Injectable } from '@angular/core';
@@ -10,8 +11,18 @@ export interface City {
   like: boolean;
   date: string;
   title: string;
+  hotels: Hotel[];
 }
-
+export interface Hotel {
+  id: number;
+  name: string;
+  rating: number;
+  location: string;
+  description: string;
+  price: number | CurrencyPipe;
+  countReviews: number;
+  image: string;
+}
 @Injectable({
   providedIn: 'root',
 })

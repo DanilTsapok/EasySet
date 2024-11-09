@@ -5,11 +5,21 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { HotelsComponent } from '../../hotels/hotels.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridList, MatGridTile } from '@angular/material/grid-list';
 
 @Component({
   selector: 'app-cities',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [
+    CommonModule,
+    RouterLink,
+    MatButtonModule,
+    MatCardModule,
+    MatGridList,
+    MatGridTile,
+  ],
   templateUrl: './cities.component.html',
   styleUrl: './cities.component.scss',
 })
@@ -29,7 +39,7 @@ export class CitiesComponent implements OnInit {
       : this.cityService.setLikePost(id);
   }
 
-  openBottomSheet(): void {
-    this._bottomSheet.open(HotelsComponent);
+  openBottomSheet(city: City): void {
+    this._bottomSheet.open(HotelsComponent, { data: city });
   }
 }

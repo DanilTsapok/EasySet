@@ -1,25 +1,44 @@
 <div class="cardContainer">
+  <div class="iComponent">
+    <img src="Logo.png" alt="" />
+    <h1>EasySet 24</h1>
+  </div>
+
   <ul>
     <li *ngFor="let city of cities">
-      <div class="cardBody">
-        <img [src]="city.image" alt="{{ city.name }}" />
-        <a [routerLink]="['/city', city.id]">
-          <h3>{{ city.name }} (Rating: {{ city.rating }})</h3>
-        </a>
-        <p>{{ city.date }}</p>
-        <p>{{ city.title }}</p>
-        <button id="like" (click)="toggleLike(city.id)">
-          <img
-            [src]="
-              city.like
-                ? 'https://img.icons8.com/ios-filled/50/FFFFFF/like--v1.png'
-                : 'Vector.svg'
-            "
-            alt="{{ city.like ? 'Liked' : 'Unliked' }}"
-          />
-        </button>
-        <button mat-raised-button (click)="openBottomSheet()">Open file</button>
-      </div>
+      <mat-card appearance="outlined">
+        <mat-card-content class="cardBody">
+          <img [src]="city.image" alt="{{ city.name }}" />
+          <a [routerLink]="['/city', city.id]">
+            <h3>{{ city.name }} (Rating: {{ city.rating }})</h3>
+          </a>
+
+          <p>{{ city.date }}</p>
+          <p>{{ city.title }}</p>
+          <button id="like" (click)="toggleLike(city.id)">
+            <img
+              [src]="
+                city.like
+                  ? 'https://img.icons8.com/ios-filled/50/FFFFFF/like--v1.png'
+                  : 'Vector.svg'
+              "
+              alt="{{ city.like ? 'Liked' : 'Unliked' }}"
+            />
+          </button>
+          <button
+            id="hotelsBtn"
+            mat-flat-button
+            mat-raised-button
+            (click)="openBottomSheet(city)"
+          >
+            Hotels
+          </button>
+        </mat-card-content>
+      </mat-card>
+
+      <!-- <div class="cardBody"> -->
+
+      <!-- </div> -->
     </li>
   </ul>
 </div>

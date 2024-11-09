@@ -3,22 +3,30 @@
     <h1>Likes</h1>
     <ul>
       <li *ngFor="let city of citiesWithLikes">
-        <div class="cardBody">
-          <img [src]="city.image" alt="{{ city.name }}" />
-          <h3>{{ city.name }} (Rating: {{ city.rating }})</h3>
-          <p>{{ city.date }}</p>
-          <p>{{ city.title }}</p>
-          <button>
-            <img
-              [src]="
-                city.like
-                  ? 'https://img.icons8.com/ios-filled/50/FFFFFF/like--v1.png'
-                  : 'Vector.svg'
-              "
-              alt="{{ city.like ? 'Liked' : 'Unliked' }}"
-            />
-          </button>
-        </div>
+        <mat-card appearance="outlined">
+          <mat-card-content class="cardBody">
+            <img [src]="city.image" alt="{{ city.name }}" />
+
+            <h3>{{ city.name }} (Rating: {{ city.rating }})</h3>
+
+            <p>{{ city.date }}</p>
+            <p>{{ city.title }}</p>
+            <button id="like" (click)="toggleLike(city.id)">
+              <img
+                [src]="
+                  city.like
+                    ? 'https://img.icons8.com/ios-filled/50/FFFFFF/like--v1.png'
+                    : 'Vector.svg'
+                "
+                alt="{{ city.like ? 'Liked' : 'Unliked' }}"
+              />
+            </button>
+          </mat-card-content>
+        </mat-card>
+
+        <!-- <div class="cardBody"> -->
+
+        <!-- </div> -->
       </li>
     </ul>
   </div>
