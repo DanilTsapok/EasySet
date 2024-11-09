@@ -6,7 +6,7 @@ import { TranslateModule } from '@ngx-translate/core';
   selector: 'app-register-form',
   standalone: true,
   imports: [CommonModule, TranslateModule],
-  templateUrl: './registerform.component.html',
-  styleUrl: './registerform.component.scss',
+  templateUrl: './registerForm.component.html',
+  styleUrl: './registerForm.component.scss',
 })
-export class RegisterformComponent {}
+export class RegisterFormComponent {}

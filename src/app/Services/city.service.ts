@@ -1,3 +1,4 @@
+import { cities } from './CitiesState';
 import { LikeService } from './like.service';
 import { Injectable } from '@angular/core';
 
@@ -15,58 +16,7 @@ export interface City {
   providedIn: 'root',
 })
 export class CityService {
-  private cities: City[] = [
-    {
-      id: 1,
-      name: 'Berlin',
-      rating: 8.2,
-      date: 'Wed 25 Jan-Fri 27 Jan',
-      image: 'Berlin.jpeg',
-      like: false,
-      title:
-        'A tour of the city and its surroundings led by a professional guide',
-    },
-    {
-      id: 2,
-      name: 'Paris',
-      rating: 8.2,
-      date: 'Wed 25 Jan-Fri 27 Jan',
-      image: 'Paris.jpeg',
-      like: false,
-      title:
-        'A tour of the city and its surroundings led by a professional guide',
-    },
-    {
-      id: 3,
-      name: 'Madrid',
-      rating: 8.2,
-      date: 'Wed 25 Jan-Fri 27 Jan',
-      image: 'Madrid.jpeg',
-      like: false,
-      title:
-        'A tour of the city and its surroundings led by a professional guide',
-    },
-    {
-      id: 4,
-      name: 'Madrid',
-      rating: 8.2,
-      date: 'Wed 25 Jan-Fri 27 Jan',
-      image: 'Madrid.jpeg',
-      like: false,
-      title:
-        'A tour of the city and its surroundings led by a professional guide',
-    },
-    {
-      id: 5,
-      name: 'Madrid',
-      rating: 8.2,
-      date: 'Wed 25 Jan-Fri 27 Jan',
-      image: 'Madrid.jpeg',
-      like: false,
-      title:
-        'A tour of the city and its surroundings led by a professional guide',
-    },
-  ];
+  private cities: City[] = cities;
   constructor() {
     this.checkLike();
   }
@@ -91,7 +41,7 @@ export class CityService {
   }
 
   unsetLikePost(id: number) {
-    this.storedIds.filter((value) => value != id);
+    this.storedIds = this.storedIds.filter((value) => value != id);
     localStorage.setItem('likedCity', JSON.stringify(this.storedIds));
     let city = this.cities.find((city) => city.id === id);
     city ? (city.like = false) : console.log('City with this Id not found');
