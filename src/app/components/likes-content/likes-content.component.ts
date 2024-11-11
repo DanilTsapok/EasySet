@@ -2,7 +2,7 @@ import { LikeService } from '../../Services/like.service';
 import { Component, OnInit } from '@angular/core';
 import { City, CityService } from '../../Services/city.service';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
 import { MatCardModule } from '@angular/material/card';
@@ -16,6 +16,7 @@ import { MatCardModule } from '@angular/material/card';
     HeaderComponent,
     FooterComponent,
     MatCardModule,
+    RouterLink,
   ],
   templateUrl: './likes-content.component.html',
   styleUrl: './likes-content.component.scss',

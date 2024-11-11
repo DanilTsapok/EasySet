@@ -24,6 +24,7 @@ import {
 } from '@angular/forms';
 
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { MatCheckbox } from '@angular/material/checkbox';
 @Component({
   selector: 'app-login-form',
   animations: [
@@ -55,7 +56,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
     ]),
   ],
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, TranslateModule],
+  imports: [CommonModule, ReactiveFormsModule, TranslateModule, MatCheckbox],
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.scss'],
 })

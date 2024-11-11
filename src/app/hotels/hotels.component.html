@@ -17,21 +17,7 @@
 
               <div>Location: {{ hotel.location }}</div>
               <div>{{ hotel.description }}</div>
-              <div
-                style="
-                  display: flex;
-                  justify-content: center;
-                  width: 120px;
-                  height: 50px;
-                  background-color: green;
-                  padding: 5px;
-                  color: white;
-                  flex-direction: column;
-                  border-radius: 10px;
-                "
-              >
-                UAH {{ hotel.price }}
-              </div>
+              <div class="price">UAH {{ hotel.price }}</div>
             </div>
 
             <img src="{{ hotel.image }}" alt="" srcset="" />

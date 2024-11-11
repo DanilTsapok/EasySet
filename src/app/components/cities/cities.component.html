@@ -10,9 +10,9 @@
         <mat-card-content class="cardBody">
           <img [src]="city.image" alt="{{ city.name }}" />
           <a [routerLink]="['/city', city.id]">
-            <h3>{{ city.name }} (Rating: {{ city.rating }})</h3>
+            <h3>{{ city.name }}</h3>
+            <span class="rating">{{ city.rating }}</span>
           </a>
-
           <p>{{ city.date }}</p>
           <p>{{ city.title }}</p>
           <button id="like" (click)="toggleLike(city.id)">
@@ -31,10 +31,6 @@
           </button>
         </mat-card-content>
       </mat-card>
-
-      <!-- <div class="cardBody"> -->
-
-      <!-- </div> -->
     </li>
   </ul>
 </div>

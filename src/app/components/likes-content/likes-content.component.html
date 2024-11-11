@@ -1,14 +1,18 @@
 <main>
   <div class="cardContainer">
-    <h1>Likes</h1>
+    <div class="iComponent">
+      <img src="Logo.png" alt="" />
+      <h1>Likes</h1>
+    </div>
     <ul>
       <li *ngFor="let city of citiesWithLikes">
         <mat-card appearance="outlined">
           <mat-card-content class="cardBody">
             <img [src]="city.image" alt="{{ city.name }}" />
-
-            <h3>{{ city.name }} (Rating: {{ city.rating }})</h3>
-
+            <a [routerLink]="['/city', city.id]">
+              <h3>{{ city.name }}</h3>
+              <span class="rating">{{ city.rating }}</span>
+            </a>
             <p>{{ city.date }}</p>
             <p>{{ city.title }}</p>
             <button id="like" (click)="toggleLike(city.id)">
@@ -19,10 +23,6 @@
             </button>
           </mat-card-content>
         </mat-card>
-
-        <!-- <div class="cardBody"> -->
-
-        <!-- </div> -->
       </li>
     </ul>
   </div>

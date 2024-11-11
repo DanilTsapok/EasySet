@@ -7,7 +7,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 100px;
+
   background-image: url("../../../../public/Back.jfif");
   background-size: cover;
 
@@ -17,7 +17,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 100px;
+
     animation: 1s ease-in-out anim2;
   }
   h1 {
@@ -29,9 +29,6 @@
     color: rgba(7, 104, 159, 1);
     margin-bottom: 20px;
     animation: 1.2s ease-in-out anim2;
-
-    img {
-    }
     span {
       width: 35%;
       height: 60px;
@@ -68,19 +65,28 @@ ul {
 }
 .cardBody {
   width: 288px;
-  height: 367px;
-
+  height: 400px;
   border-radius: 5px;
   position: relative;
+  a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
 
+    font-size: 20px;
+    color: rgba(7, 104, 159, 1);
+  }
   img {
     border-radius: 5px;
     width: 272px;
     height: 203px;
+    margin-bottom: 10px;
   }
   button[id="like"] {
     position: absolute;
-    top: 20px;
+    top: 25px;
     left: 20px;
 
     border-radius: 50%;
@@ -99,4 +105,15 @@ ul {
     right: 10px;
     bottom: 10px;
   }
+}
+
+.rating {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgba(7, 104, 159, 1);
+  color: white;
 }
