@@ -1,26 +1,41 @@
-<p>{{ cityData.name }}</p>
-<p>{{ cityData.rating }}</p>
-<p>{{ cityData.title }}</p>
-
 <div *ngIf="cityData.hotels?.length">
-  <h3>Hotels</h3>
+  <div class="title">
+    <p>Hotels</p>
+    {{ cityData.name }}
+  </div>
   <ul>
     <li *ngFor="let hotel of cityData.hotels">
       <mat-card appearance="outlined">
         <mat-card-content>
-          <mat-grid-list cols="2" rowHeight="1:1">
-            <mat-grid-tile>
-              <div>Name: {{ hotel.name }}</div>
-              <div>Rating: {{ hotel.rating }}</div>
+          <div class="cardContent">
+            <div class="textContent">
+              <div class="hotelTitle">
+                <div class="hotelName">{{ hotel.name }}</div>
+                <span>{{ hotel.countReviews }}reviews</span>
+                <div class="rating">{{ hotel.rating }}</div>
+              </div>
+
               <div>Location: {{ hotel.location }}</div>
               <div>{{ hotel.description }}</div>
-              <div>{{ hotel.price }}</div>
-              <div>{{ hotel.countReviews }}</div>
-            </mat-grid-tile>
-            <mat-grid-tile
-              ><img src="{{ hotel.image }}" alt="" srcset=""
-            /></mat-grid-tile>
-          </mat-grid-list>
+              <div
+                style="
+                  display: flex;
+                  justify-content: center;
+                  width: 120px;
+                  height: 50px;
+                  background-color: green;
+                  padding: 5px;
+                  color: white;
+                  flex-direction: column;
+                  border-radius: 10px;
+                "
+              >
+                UAH {{ hotel.price }}
+              </div>
+            </div>
+
+            <img src="{{ hotel.image }}" alt="" srcset="" />
+          </div>
         </mat-card-content>
       </mat-card>
     </li>

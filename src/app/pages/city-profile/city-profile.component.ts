@@ -19,6 +19,7 @@ export class CityProfileComponent implements OnInit {
   constructor(private cityService: CityService) {}
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
     this.cityId = Number(this.route.snapshot.paramMap.get('id'));
     this.city = this.cityService.getCityById(this.cityId);
   }

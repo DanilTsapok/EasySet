@@ -1,8 +1,5 @@
 import { Component, Inject, inject, OnInit } from '@angular/core';
-import {
-  MAT_BOTTOM_SHEET_DATA,
-  MatBottomSheetRef,
-} from '@angular/material/bottom-sheet';
+import { MAT_BOTTOM_SHEET_DATA } from '@angular/material/bottom-sheet';
 import { City } from '../Services/city.service';
 import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
@@ -20,6 +17,7 @@ export class HotelsComponent implements OnInit {
 
   constructor(@Inject(MAT_BOTTOM_SHEET_DATA) public data: any) {}
   ngOnInit(): void {
+    window.scrollTo(0, 0);
     this.cityData = this.data;
   }
 }

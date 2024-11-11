@@ -17,11 +17,7 @@
           <p>{{ city.title }}</p>
           <button id="like" (click)="toggleLike(city.id)">
             <img
-              [src]="
-                city.like
-                  ? 'https://img.icons8.com/ios-filled/50/FFFFFF/like--v1.png'
-                  : 'Vector.svg'
-              "
+              [src]="city.like ? 'Like.svg' : 'Vector.svg'"
               alt="{{ city.like ? 'Liked' : 'Unliked' }}"
             />
           </button>

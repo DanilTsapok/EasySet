@@ -29,6 +29,7 @@ export class CitiesComponent implements OnInit {
   constructor(private cityService: CityService) {}
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
     this.cities = this.cityService.getAllCity();
   }
 

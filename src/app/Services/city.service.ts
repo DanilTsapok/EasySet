@@ -62,12 +62,10 @@ export class CityService {
     const likedIds: number[] = JSON.parse(
       localStorage.getItem('likedCity') || '[]'
     );
-
     this.cities = this.cities.map((city) => ({
       ...city,
       like: likedIds.includes(city.id),
     }));
-
     console.log(likedIds);
   }
 }
